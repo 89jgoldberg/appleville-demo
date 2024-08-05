@@ -1,0 +1,279 @@
+:root {
+    --primary-100: #cbd6d2;
+    --primary-200: #99aea7;
+    --primary-300: #69887d;
+    --primary-400: #3b6356;
+    --primary-500: #064032;
+    --primary-600: #0b3429;
+    --primary-700: #0d2920;
+    --primary-800: #0d1d18;
+    --primary-900: #07120f;
+    --secondary-100: #dbf1e4;
+    --secondary-200: #b7e3c9;
+    --secondary-300: #91d5ae;
+    --secondary-400: #69c694;
+    --secondary-500: #35b77b;
+    --secondary-600: #2f8f61;
+    --secondary-700: #286a49;
+    --secondary-800: #1f4632;
+    --secondary-900: #15261c;
+    --tertiary-100: #edffec;
+    --tertiary-200: #daffd9;
+    --tertiary-300: #c7ffc6;
+    --tertiary-400: #b2ffb2;
+    --tertiary-500: #9bff9f;
+    --tertiary-600: #7bc67d;
+    --tertiary-700: #5b915d;
+    --tertiary-800: #3e5e3e;
+    --tertiary-900: #223022;
+    --bs-body-font-family: "Barlow", sans-serif;
+    --font-dm-serif: "DM Serif Display", serif;
+    --heading: var(--font-dm-serif);
+}
+
+.btn.btn-primary {
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--primary-500);
+    --bs-btn-border-color: var(--primary-500);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--primary-600);
+    --bs-btn-hover-border-color: var(--primary-600);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--primary-700);
+    --bs-btn-active-border-color: var(--primary-700);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-800);
+    --bs-btn-disabled-border-color: var(--primary-800);
+}
+
+.btn.btn-tertiary {
+    --bs-btn-color: var(--bs-dark);
+    --bs-btn-bg: var(--tertiary-500);
+    --bs-btn-border-color: var(--tertiary-500);
+    --bs-btn-hover-color: var(--bs-dark);
+    --bs-btn-hover-bg: var(--tertiary-600);
+    --bs-btn-hover-border-color: var(--tertiary-600);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--tertiary-700);
+    --bs-btn-active-border-color: var(--tertiary-700);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--tertiary-800);
+    --bs-btn-disabled-border-color: var(--tertiary-800);
+}
+
+/* */
+.btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+.grid-overlap {
+    grid-template-areas: "area";
+}
+
+.grid-overlap>* {
+    grid-area: area;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-balance {
+    text-wrap: balance !important;
+}
+
+.fw-100 {
+    font-weight: 100 !important;
+}
+
+.fw-200 {
+    font-weight: 200 !important;
+}
+
+.fw-300 {
+    font-weight: 300 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+.f-barlow {
+    font-family: "Barlow", sans-serif;
+}
+
+.f-dm {
+    font-family: var(--font-dm-serif);
+}
+
+/* */
+nav.appleville-nav {
+    background-color: var(--primary-500);
+    color: var(--tertiary-500);
+    position: sticky;
+    left:0;right: 0;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 1000;
+}
+@media screen and (min-width: 992px){
+	nav.appleville-nav { top: 0; }
+}
+@media screen and (max-width: 991.99px){
+	nav.appleville-nav { bottom: 0; position:fixed; }
+}
+nav.appleville-nav .offcanvas {
+	--bs-offcanvas-bg: var(--primary-500);
+	--bs-offcanvas-color: var(--bs-white);
+}
+
+header.appleville-header {
+    --ratio: 3/1;
+    background-color: var(--bs-gray-300);
+    aspect-ratio: var(--ratio);
+    min-height: 400px;
+    max-width: 100vw;
+    display: flex;
+}
+
+header.appleville-header>div {
+    flex: 1;
+}
+
+header.appleville-header figure img {
+	aspect-ratio: var(--ratio);
+	min-height: 400px;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+section.the-plannings {
+    --ratio: 16/9;
+    background-color: var(--tertiary-100);
+}
+
+section.the-plannings .row>div {
+    display: flex;
+}
+
+section.the-plannings .row>div:nth-child(4n+3) {
+    background-color: var(--secondary-100);
+}
+
+section.the-plannings .row>div figure {
+    flex: 1;
+    aspect-ratio: var(--ratio);
+    margin-bottom: 0;
+    position: relative;
+}
+
+section.the-plannings .row>div figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    section.the-plannings {
+        overflow: hidden;
+    }
+
+    section.the-plannings .row>div:nth-child(4n+3) {
+        transform: translateX(100%);
+    }
+
+    section.the-plannings .row>div:nth-child(4n+3)+div {
+        transform: translateX(-100%);
+    }
+}
+
+.card.card-team {
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 0px;
+    --bs-card-inner-border-radius: 0px;
+}
+
+.card.card-team .card-header h6 {
+    font-weight: 800;
+}
+
+.card.card-team .card-header * {
+    margin: 0;
+}
+
+.link-team {
+    --link-text-fg: var(--bs-dark);
+    --link-icon-fg: var(--bs-white);
+    --link-icon-bg: var(--primary-500);
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--link-text-fg);
+    font-weight: 600;
+}
+
+.link-team abbr {
+    aspect-ratio: 1;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--link-icon-bg);
+    margin-right: 0.5rem;
+}
+
+.link-team abbr iconify-icon {
+    font-size: 60%;
+    color: var(--link-icon-fg);
+}
+
+.appleville-footer {
+    background-color: var(--primary-500);
+    background-image: linear-gradient(0deg, var(--primary-700) 19%, var(--primary-700) 24%, var(--primary-500) 100%);
+    color: var(--bs-white);
+}
+
+.appleville-footer .link-team {
+    --link-icon-bg: var(--bs-white);
+    --link-icon-fg: var(--primary-500);
+    --link-text-fg: var(--bs-white);
+}
+
+.appleville-footer .the-socials .link-team {
+	font-size: 35px;
+}
+
+.appleville-footer .the-socials .link-team iconify-icon {
+	font-size: 45%;
+}
